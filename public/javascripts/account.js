@@ -1,4 +1,4 @@
-$(function() {
+$(function($) {
   window.PasswordView = Backbone.View.extend({
     el: $("#change_password"),
     events: {
@@ -98,4 +98,4 @@ $(function() {
   window.PasswordApp = new PasswordView()
   window.EmailApp = new EmailView();
 
-});
+}(jQuery));

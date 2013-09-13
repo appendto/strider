@@ -42,29 +42,28 @@
 
       <div id="password" class="tab-pane">
         <div id="change_password" class="span8">
-          <div class='password-message'>
-            <div class='well'>
-              <fieldset>
-                <legend>Change Password</legend>
-                <div class='control-group password'>
-                  <label class='control-label' for='password'>New Password</label>
-                </div>
-                <div class="controls">
-                  <input class="xlarge" type='password' name='password' />
-                  <span class="help-inline password"></span>
-                </div>
-                <div class="control-group password-confirm">
-                  <label class="control-label" for='password_confirm'>New Password Confirm</label>
-                </div>
-                <div class='controls'>
-                  <input class="xlarge" type='password' name='password_confirm' />
-                  <span class='help-inline password-confirm'>
-                </div>
-                <div class="actions">
-                  <button class="btn">Change Password</a>
-                </div>
-              </fieldset>
-            </div>
+          <div class='password-message'></div>
+          <div class='well'>
+            <fieldset>
+              <legend>Change Password</legend>
+              <div class='control-group password'>
+                <label class='control-label' for='password-field'>New Password</label>
+              </div>
+              <div class="controls">
+                <input class="xlarge" type='password' name='password' id="password-field" />
+                <span class="help-inline password"></span>
+              </div>
+              <div class="control-group password-confirm">
+                <label class="control-label" for='password-confirm-field'>New Password Confirm</label>
+              </div>
+              <div class='controls'>
+                <input class="xlarge" type='password' name='password_confirm' id="password-confirm-field" />
+                <span class='help-inline password-confirm'></span>
+              </div>
+              <div class="actions">
+                <button class="btn">Change Password</button>
+              </div>
+            </fieldset>
           </div>
         </div>
       </div>
