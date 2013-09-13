@@ -1,6 +1,6 @@
 // Use Backbone.js to render the project_config dashboard.
 
-$(function() {
+$(function($) {
   function status_msg(msg, alertclass, id) {
     $(id).html(msg);
     $(id).removeClass().addClass("alert alert-"+alertclass);
@@ -260,4 +260,4 @@ $(function(){
 
   });
 
-})
+}(jQuery));
