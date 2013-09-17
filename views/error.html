@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block bodyContent %}
+
+<div class='span5'>
+  {% if !status %}
+    <h1>{{title}}</h1>
+    <p>{{message}}</p>
+  {% endif %}
+
+  {% if status === 400 %}
+  <!-- 400 bad request -->
+  {% pluginblock http400 %}{% endpluginblock %}
+  {% endif %}
+
+  {% if status === 401 %}
+  <!-- 401 unauthorized -->
+  {% pluginblock http401 %}{% endpluginblock %}
+  {% endif %}
+
+  {% if status === 401 %}
+  <!-- 403 forbidden -->
+  {% pluginblock http403 %}{% endpluginblock %}
+  {% endif %}
+
+  {% if status === 404 %}
+  <!-- 404 not found -->
+  {% pluginblock http404 %}
+  <p>The page you have requested does not exist</p>
+  {% endpluginblock %}
+  {% endif %}
+
+  {% if status === 500 %}
+  <!-- 500 server error -->
+  {% pluginblock http500 %}{% endpluginblock %}
+  {% endif %}
+</div>
+
+{% endblock %}
