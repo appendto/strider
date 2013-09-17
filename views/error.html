@@ -18,7 +18,7 @@
   {% pluginblock http401 %}{% endpluginblock %}
   {% endif %}
 
-  {% if status === 401 %}
+  {% if status === 403 %}
   <!-- 403 forbidden -->
   {% pluginblock http403 %}{% endpluginblock %}
   {% endif %}
