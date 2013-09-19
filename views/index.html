@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 
 {% block bodyContent %}
-{% if !currentUser %} 
-  <div class='StriderBlock_LoggedOutFillContent'>{% pluginblock LoggedOutFillContent %}
-      {% include "partials/errors.html" %}
-      {% include "partials/signupform.html" %}
-  {% endpluginblock %}</div>
+{% if showHome %}
+<!-- not logged in -->
+  <div class='StriderBlock_LoggedOutFillContent'>
+  {% pluginblock LoggedOutFillContent %}
+    {% include "partials/errors.html" %}
+    {% include "partials/signupform.html" %}
+  {% endpluginblock %}
+  </div>
 
   <script>
     $(document).ready(function() {
@@ -15,6 +18,7 @@
   </script>
 
 {% else %}
+<!-- logged in -->
 
 {% if !currentUser.github.id %}
 <div class="span7 well">
