@@ -2,7 +2,6 @@
 
 {% block bodyContent %}
 {% if showHome %}
-<!-- not logged in -->
   <div class='StriderBlock_LoggedOutFillContent'>
   {% pluginblock LoggedOutFillContent %}
     {% include "partials/errors.html" %}
@@ -18,7 +17,6 @@
   </script>
 
 {% else %}
-<!-- logged in -->
 
 {% if !currentUser.github.id %}
 <div class="span7 well">
