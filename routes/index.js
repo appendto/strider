@@ -39,14 +39,7 @@ exports.index = function(req, res){
       code = req.param('code');
           res.render('register.html', {invite_code:code});
     } else {
-      if (req.user != undefined) {
-        req.user.get_repo_config_list(function(err, repo_list) {
-          if (err) throw err;
-          res.render('index.html',{total_configured_projects:repo_list.length});
-        });
-      } else {
-        res.render('index.html');
-      }
+      res.render('index.html', {showHome: true});
     }
 
   }

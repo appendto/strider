@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
 {% block bodyContent %}
-{% if !currentUser %} 
-  <div class='StriderBlock_LoggedOutFillContent'>{% pluginblock LoggedOutFillContent %}
-      {% include "partials/errors.html" %}
-      {% include "partials/signupform.html" %}
-  {% endpluginblock %}</div>
+{% if showHome %}
+  <div class='StriderBlock_LoggedOutFillContent'>
+  {% pluginblock LoggedOutFillContent %}
+    {% include "partials/errors.html" %}
+    {% include "partials/signupform.html" %}
+  {% endpluginblock %}
+  </div>
 
   <script>
     $(document).ready(function() {
