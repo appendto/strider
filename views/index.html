@@ -20,7 +20,7 @@
 
 {% if !currentUser.github.id %}
 <div class="span7 well">
-  <h3>Welcome to Strider, {{currentUser.email}}!</h3> 
+  <h3>Welcome to {% pluginblock ApplicationName %}Strider{% endpluginblock %}, {{currentUser.email}}!</h3>
   {% pluginblock GithubLinkContent %}
   <p> It looks like you haven't yet linked your Github account. Press the button below to get started.
   </p>
